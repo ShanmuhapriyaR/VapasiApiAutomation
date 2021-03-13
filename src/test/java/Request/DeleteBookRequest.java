@@ -1,13 +1,16 @@
 package Request;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class DeleteBookRequest {
-        private String ID;
+     @JsonProperty("ID")
+        private String id;
         public String getID() {
-            return ID;
+            return id;
         }
-        public void setID(String ID)
+        public void setID(String id)
         {
-            this.ID = ID;
+            this.id = id;
         }
     }
 

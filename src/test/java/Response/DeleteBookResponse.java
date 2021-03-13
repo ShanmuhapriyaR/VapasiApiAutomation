@@ -1,9 +1,7 @@
 package Response;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class DeleteBookResponse {
-    @JsonProperty("Msg")
+    //@JsonProperty("Msg")
     private String msg;
 
     public String getMsg(){

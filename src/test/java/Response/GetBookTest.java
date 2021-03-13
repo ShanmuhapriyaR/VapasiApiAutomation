@@ -13,19 +13,18 @@ public class GetBookTest {
         RestAssured.baseURI = "http://216.10.245.166";
         Response GetBookRes = given()
                 .log().all()
-                .queryParam("ID","1234123312313244")
+                .queryParam("ID","19879876")
                 .header("Content-Type","application/json")
                 .when()
-                .get("Library/GetBook.php?ID")
+                .get("Library/GetBook.php")
                 .then()
                 .assertThat()
                 .statusCode(200)
                 .extract()
                 .response();
         System.out.println("----Get book response :" +GetBookRes.asString());
-        AddBookResponse getBook = GetBookRes.body().as(AddBookResponse.class);
-        getBook.getId();
-        Assert.assertEquals(getBook.getId(),"Harry isbn23333");
+        GetBookResponse[] getBook = GetBookRes.as(GetBookResponse[].class);
+        Assert.assertEquals(getBook[0].getAuthor(),"sundar","Invalid");
 
 
     }

@@ -13,10 +13,10 @@ public class AddBookTest {
     public void addBook(){
         RestAssured.baseURI = "http://216.10.245.166";
         AddBookRequest addBookRequest = new AddBookRequest();
-        addBookRequest.setName("Harry Potter2");
-        addBookRequest.setIsbn("Harry isbn2");
-        addBookRequest.setAisle("3333");
-        addBookRequest.setAuthor("Potter");
+        addBookRequest.setName("parthiv");
+        addBookRequest.setIsbn("1987");
+        addBookRequest.setAisle("9876");
+        addBookRequest.setAuthor("sundar");
         Response addBookResponse =given().header("Content-Type","application/json")
                 .body(addBookRequest)
                 .when()
@@ -34,10 +34,10 @@ public class AddBookTest {
 public void addSameBook(){
     RestAssured.baseURI = "http://216.10.245.166";
     AddBookRequest addBookRequest = new AddBookRequest();
-    addBookRequest.setName("aaaa");
-    addBookRequest.setIsbn("9999");
-    addBookRequest.setAisle("1245");
-    addBookRequest.setAuthor("a");
+    addBookRequest.setName("parthiv");
+    addBookRequest.setIsbn("1987");
+    addBookRequest.setAisle("9876");
+    addBookRequest.setAuthor("sundar");
     Response addSameBookResponse =given().header("Content-Type","application/json")
             .body(addBookRequest)
             .when()

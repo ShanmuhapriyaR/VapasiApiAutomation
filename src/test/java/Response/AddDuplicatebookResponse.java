@@ -1,10 +1,8 @@
 package Response;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 public class AddDuplicatebookResponse {
 
-    @JsonProperty("Msg")
+    //@JsonProperty("Msg")
     private String msg;
 
     public String getMsg(){
