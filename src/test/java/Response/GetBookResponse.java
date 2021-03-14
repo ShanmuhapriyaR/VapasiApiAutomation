@@ -39,5 +39,11 @@ public class GetBookResponse {
     public void setAuthor(String author) {
         this.author = author;
     }
+    public void getDetails()
+    {
+        System.out.println(name);
+        System.out.println(isbn);
+        System.out.println(aisle);
+    }
 }
 
